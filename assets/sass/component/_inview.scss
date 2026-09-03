@@ -1,0 +1,111 @@
+//  =============================
+// 下からフェード
+//  =============================
+.fadeUp {
+    opacity: 0;
+}
+.fadeUpIn {
+    animation: fadeUpIn 2s cubic-bezier(0.295, 0.03, 0.115, 1) 0s both;
+}
+
+@keyframes fadeUpIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+//  =============================
+// 右からフェード
+//  =============================
+.fadeLft {
+    opacity: 0;
+}
+.fadeLftIn {
+    animation: fadeLftIn 2s cubic-bezier(0.295, 0.03, 0.115, 1) 0s both;
+}
+
+@keyframes fadeLftIn {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+//  =============================
+// 左からフェード
+//  =============================
+.fadeRgt {
+    opacity: 0;
+}
+.fadeRgtIn {
+    animation: fadeRgtIn 2s cubic-bezier(0.295, 0.03, 0.115, 1) 0s both;
+}
+
+@keyframes fadeRgtIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+//  =============================
+// 上からフェード
+//  =============================
+.fadeBtm {
+    opacity: 0;
+}
+.fadeBtmIn {
+    animation: fadeBtmIn 2s cubic-bezier(0.295, 0.03, 0.115, 1) 0s both;
+}
+
+@keyframes fadeBtmIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+//  =============================
+// スクロールマーク
+//  =============================
+.scrollMark {
+    opacity: 1;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  
+  .scrollMarkIn {
+    -webkit-animation: scrollMarkIn 1s ease 1.5s both;
+            animation: scrollMarkIn 1s ease 1.5s both;
+  }
+  
+  @keyframes scrollMarkIn {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(-40px);
+              transform: translateX(-40px);
+    }
+  }

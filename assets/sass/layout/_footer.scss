@@ -1,0 +1,76 @@
+@use "setting/mixin" as *;
+@use "setting/calc" as *;
+
+.l-ft {
+    background-color: var(--bgOreCol);
+    border-top: 2px solid var(--bgBgCol);
+    background-color: var(--bgOraCol);
+    position: relative;
+    &_cnt {
+        width: calc(100% - 20px);
+        display: flex;
+        justify-content: space-between;
+        padding: 41px 0 41px;
+        &-logo {
+            width: 200px;
+            img {
+
+            }
+            &-cp {
+                font-family: var(--Manrope);
+                font-size: 1rem;
+                font-weight: bold;
+                margin-top: 15px;
+                letter-spacing: 0.025em;
+                color: var(--txtBgCol);
+            }
+        }
+        &-iconWrap {
+            width: 195px;
+        }
+        &-icon {
+            display: flex;
+            justify-content: space-between;
+            li {
+                width: 88px;
+            }
+        }
+    }
+}
+
+@include sp {
+    .l-ft {
+        
+        &_cnt {
+            padding: vwsp(30) 0 vwsp(70);
+            width: calc(100% - 70px);
+            position: relative;
+            &-logo {
+                width: vwsp(98);
+                img {
+                    width: 100%;
+                }
+                &-cp {
+                    font-size: vwsp(10);
+                    margin-top: 0;
+                    padding-top: vwsp(26);
+                    text-align: center;
+                    padding-bottom: vwsp(26);
+                    position: absolute;
+                    width: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            &-iconWrap {
+                width: vwsp(148);
+            }
+            &-icon {
+                width: vwsp(148);
+                li {
+                    width: vwsp(65);
+                }
+            }
+        }
+    }
+}

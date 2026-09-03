@@ -1,0 +1,105 @@
+@use "setting/mixin" as *;
+@use "setting/calc" as *;
+
+.c-btn {
+    &__toTop {
+        position: fixed;
+        z-index: 999;
+        bottom: 50px;
+        right: 50px;
+        width: 60px;
+        opacity: 0;
+    }
+    &_1 {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bgBtn);
+            color: var(--wht);
+            border: 1px solid var(--bgBtn);
+            font-size: var(--fszSubTtl);
+            width: 300px;
+            height: 60px;
+            margin: 0 auto;
+            border-radius: 10px;
+            position: relative;
+            &:before {
+                position: absolute;
+                content: "";
+                width: 10px;
+                height: 10px;
+                top: 50%;
+                right: 24px;
+                transform: translateY(-50%);
+                background-image: url(/assets/img/common/icon_arw_gry.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            &:hover {
+                color: var(--bgBtn);
+                background-color: var(--wht);
+                border: 1px solid var(--bgBtn);
+            }
+        }
+    }
+    &_2 {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bgBtn);
+            color: var(--wht);
+            border: 1px solid var(--bgBtn);
+            font-size: var(--fszMid);
+            width: 200px;
+            height: 30px;
+            margin: 0 auto;
+            border-radius: 100vmax;
+            position: relative;
+            &:hover {
+                color: var(--bgBtn);
+                background-color: var(--wht);
+                border: 1px solid var(--bgBtn);
+            }
+        }
+    }
+}
+
+@include sp {
+    .c-btn {
+        &__toTop {
+            bottom: vwsp(50);
+            right: vwsp(50);
+            width: vwsp(60);
+        }
+        &_1 {
+            a {
+                font-size: vwsp(var(--fszSubTtl_sp));
+                width: vwsp(300);
+                height: vwsp(60);
+                border-radius:vwsp(10);
+                &:before {
+                    width: vwsp(10);
+                    height: vwsp(10);
+                    right: vwsp(24);
+                }
+                &:hover {
+                    
+                }
+            }
+        }
+        &_2 {
+            a {                
+                font-size: vwsp(var(--fszMid_sp));
+                width: vwsp(200);
+                height: vwsp(30);
+                border-radius: vwsp(5);
+                
+                &:hover {
+                    
+                }
+            }
+        }
+    }
+}

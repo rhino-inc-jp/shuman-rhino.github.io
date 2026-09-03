@@ -1,0 +1,35 @@
+@use "setting/mixin" as *;
+@use "setting/calc" as *;
+
+.c-ttl {
+    &-mv {
+        font-size: var(--fszMvTtl);
+        color: var(--txtMv);
+    }
+    &-1 {
+        font-size: var(--fszTtl);
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    &-2 {
+        font-size: var(--fszSubTtl);
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+@include sp {
+    .c-ttl {
+        &-mv {
+            font-size: vwsp(var(--fszMvTtl_sp));
+        }
+        &-1 {
+            font-size: vwsp(var(--fszTtl_sp));
+
+            padding-bottom: vwsp(20);
+        }
+        &-2 {
+            font-size: vwsp(var(--fszSubTtl_sp));
+            padding-bottom: vwsp(20);
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.c-swiper {
+    &-wrap {
+        &_1 {
+            position: relative;
+            &-pn {
+                bottom: -30px !important;
+                .swiper-pagination-bullet {
+                    width: 10px;
+                    height: 10px;
+                    display: inline-block;
+                    border-radius: 999px;
+                    background: var(--mainCol);
+                    opacity: 0.5;
+                }
+                .swiper-pagination-bullet-active {
+                    opacity: 1;
+                }
+            }
+            /* 前へ次への矢印カスタマイズ */
+            .swiper-button-prev,
+            .swiper-button-next {
+                height: 20px;
+                width: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-top: 0;
+            }
+            /* 前へ次への矢印カスタマイズ */
+            .swiper-button-prev::after,
+            .swiper-button-next::after {
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+                width: 20px;
+                height: 20px;
+                margin: auto;
+            }
+            /* 前への矢印カスタマイズ */
+            .swiper-button-prev::after {
+                background-image: url(/assets/img/common/slide_prev.svg);
+            }
+            /* 次への矢印カスタマイズ */
+            .swiper-button-next::after {
+                background-image: url(/assets/img/common/slide_next.svg);
+            }
+            /* 画像サイズ調整 */
+            .swiper-slide img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.c-splide {
+    &-wrap {
+        &_1 {
+            &-splide {
+                position: relative;
+                &-wrap {
+                    position: relative;
+                    .splide__arrow {
+                        z-index: 10;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            background-image: url(/assets/img/common/slide_prev.svg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                        svg {
+                            display: none;
+                        }
+                    }
+                    .splide__arrow--prev {
+                        left: 10px;
+                        &:before {
+                        }
+                    }
+                    .splide__arrow--next {
+                        right: 10px;
+                        transform: translateY(-50%) rotate(180deg);
+                        &:after {
+                        }
+                    }
+                }
+                .your-class-pagination {
+                    margin-top: 15px;
+                    button {
+                        margin: 0 5px;
+                        width: 10px;
+                        height: 10px;
+                        background: var(--mainCol);
+                        opacity: 0.5;
+                        border-radius: 999px;
+                    }
+                }
+                .your-class-page {
+                    &.is-active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

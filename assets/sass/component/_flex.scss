@@ -1,0 +1,120 @@
+@use "setting/mixin" as *;
+@use "setting/calc" as *;
+
+.c-flex {
+    &-col2 {
+        display: flex;
+        flex-wrap: wrap;
+        > div {
+            width: calc(100% / 2 - 20px * 1 / 2);
+            margin-right: 20px;
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+            &:nth-of-type(n + 3) {
+                margin-top: 20px;
+            }
+        }
+    }
+    &-col3 {
+        display: flex;
+        flex-wrap: wrap;
+        > div {
+            width: calc(100% / 3 - 30px * 2 / 3);
+            margin-right: 30px;
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
+            &:nth-of-type(n + 4) {
+                margin-top: 30px;
+            }
+        }
+    }
+    &-col4 {
+        display: flex;
+        flex-wrap: wrap;
+        > div {
+            width: calc(100% / 4 - 30px * 3 / 4);
+            margin-right: 30px;
+            &:nth-of-type(4n) {
+                margin-right: 0;
+            }
+            &:nth-of-type(n + 5) {
+                margin-top: 30px;
+            }
+        }
+    }
+    &-col5 {
+        display: flex;
+        flex-wrap: wrap;
+        > div {
+            width: calc(100% / 5 - 10px * 4 / 5);
+            margin-right: 10px;
+            &:nth-of-type(5n) {
+                margin-right: 0;
+            }
+            &:nth-of-type(n + 6) {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@include sp {
+    .c-flex {
+        &-col2 {
+            > div {
+                width: calc(100% / 2 - vwsp(20) * 1 / 2);
+                margin-right: vwsp(20);
+                &:nth-of-type(2n) {
+                    margin-right: 0;
+                }
+                &:nth-of-type(n + 3) {
+                    margin-top: vwsp(20);
+                }
+            }
+        }
+        &-col3 {
+            > div {
+                width: calc(100% / 2 - vwsp(20) * 1 / 2);
+                margin-right: vwsp(20);
+                &:nth-of-type(2n) {
+                    margin-right: 0;
+                }
+                &:nth-of-type(3) {
+                    margin-right: vwsp(20);
+                }
+                &:nth-of-type(n + 3) {
+                    margin-top: vwsp(20);
+                }
+            }
+        }
+        &-col4 {
+            > div {
+                width: calc(100% / 2 - vwsp(20) * 2 / 3);
+                margin-right: vwsp(20);
+                &:nth-of-type(2n) {
+                    margin-right: 0;
+                }
+                &:nth-of-type(n + 3) {
+                    margin-top: vwsp(20);
+                }
+            }
+        }
+        &-col5 {
+            > div {
+                width: calc(100% / 2 - vwsp(20) * 1 / 2);
+                margin-right: vwsp(20);
+                &:nth-of-type(2n) {
+                    margin-right: 0;
+                }
+                &:nth-of-type(5) {
+                    margin-right: vwsp(20);
+                }
+                &:nth-of-type(n + 3) {
+                    margin-top: vwsp(20);
+                }
+            }
+        }
+    }
+}

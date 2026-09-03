@@ -1,0 +1,16 @@
+@use "setting/mixin" as *;
+@use "setting/calc" as *;
+
+.l-main {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  &--page {
+    padding-bottom: 96px;
+  }
+}
+@include sp {
+  .l-main {
+    margin-top: vwsp(0);
+  }
+}

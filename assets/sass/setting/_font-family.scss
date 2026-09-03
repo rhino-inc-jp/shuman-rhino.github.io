@@ -1,0 +1,30 @@
+:root {
+    // font-family
+    // ZenMaruGothic
+    // @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap");
+    // --zenmaru: "Zen Maru Gothic", sans-serif;
+
+    // Noto sans
+    // @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+    // --noto_sans: "Noto Sans JP", sans-serif;
+
+    // 遊ゴシック
+    // --yu_gothic: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3",
+    //     "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+
+    // 明朝
+    // --mincho: "游明朝", YuMincho, "Kozuka Mincho Pro", "Kozuka Mincho Std", "小塚明朝 Pro R", "ＭＳ Ｐ明朝",
+    //     "MS PMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝",
+    //     "Sawarabi Mincho", serif;
+
+    // ゴシック
+    --gothic: "ヒラギノ角ゴPro W6", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", Arial, Helvetica, Verdana, sans-serif;
+
+    // Manrope
+    --Manrope : "Manrope", sans-serif;
+}
+
+@font-face {
+    font-family: "din-condensed-bold";
+    src: url("../font/din-condensed-bold.ttf") format("truetype");
+}
