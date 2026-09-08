@@ -3258,6 +3258,27 @@ a:hover {
   }
 }
 
+/* SPONSOR */
+.p-top-sponsor-logo {
+  margin-top: 30px;
+  text-align: center;
+}
+.p-top-sponsor-logo img {
+  max-width: 460px;
+  width: 100%;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-top-sponsor-logo {
+    margin-top: calc(20 / 375 * 100vw);
+  }
+  .p-top-sponsor-logo img {
+    max-width: 100%;
+  }
+}
+
 /* ACCESS */
 .p-top-access-map {
   width: 100%;
