@@ -1719,20 +1719,23 @@ a:hover {
   top: 0px;
   z-index: 10;
   background-color: var(--bgOraCol);
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 .p-top .fixed_cnt {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
+  pointer-events: none;
 }
 .p-top .fixed .insta {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: block;
-  margin-bottom: 31px;
+  margin-bottom: 0;
   position: relative;
+  pointer-events: all;
 }
 .p-top .fixed .insta svg {
   width: 40px;
@@ -1814,10 +1817,12 @@ a:hover {
   }
 }
 .p-top-ld {
-  margin-top: -61px;
+  margin-top: 0;
   position: relative;
   z-index: 1;
   background-color: var(--bgOraCol);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .p-top-ld_cnt {
   display: -webkit-box;
@@ -2543,6 +2548,10 @@ a:hover {
   overflow-y: scroll;
   height: 100%;
   padding-bottom: 30px;
+  scrollbar-width: none;
+}
+.p-top-area .swiper-slide-wrap::-webkit-scrollbar {
+  display: none;
 }
 .p-top-area .swiper-button-prev,
 .p-top-area .swiper-button-next {
@@ -2709,18 +2718,15 @@ a:hover {
   }
   .p-top .fixed {
     top: calc(0 / 375 * 100vw);
-    padding-top: calc(10 / 375 * 100vw);
-    padding-bottom: calc(20 / 375 * 100vw);
   }
   .p-top .fixed_cnt {
-    width: calc(100% - 40 / 375 * 100vw);
+    top: calc(10 / 375 * 100vw);
   }
   .p-top .fixed .insta {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     position: relative;
-    top: calc(15 / 375 * 100vw);
     text-align: center;
   }
   .p-top .fixed .insta svg {
@@ -2743,7 +2749,9 @@ a:hover {
     text-align: center;
   }
   .p-top-ld {
-    margin-top: calc(-40 / 375 * 100vw);
+    margin-top: 0;
+    padding-top: calc(10 / 375 * 100vw);
+    padding-bottom: calc(10 / 375 * 100vw);
   }
   .p-top-ld_cnt {
     -webkit-box-pack: center;
