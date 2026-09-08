@@ -2676,6 +2676,12 @@ a:hover {
 .p-top-cat_cnt-lArea-info dl:nth-of-type(3) {
   width: 100%;
   margin-top: 4px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.p-top-cat_cnt-lArea-info dl:nth-of-type(3) dd a + a {
+  margin-top: 6px;
 }
 .p-top-cat_cnt-lArea-info dl dt {
   font-size: 1.2rem;
