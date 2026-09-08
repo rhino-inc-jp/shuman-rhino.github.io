@@ -19,31 +19,6 @@ jQuery(function () {
     });
 });
 
-// hamburger
-document.addEventListener('DOMContentLoaded', function () {
-    const menuButton = document.querySelector('.js-hb');
-    const navigation = document.querySelector('.js-nav');
-    const navLinks = document.querySelectorAll('.js-nav li a');
-    const closeBtn = document.querySelector('.js-close');
-    const leftLink = document.querySelector('.lft a');
-
-    menuButton.addEventListener('click', function () {
-        navigation.classList.toggle('on');
-    });
-
-    closeBtn.addEventListener('click', function () {
-        navigation.classList.remove('on');
-    });
-
-    navLinks.forEach(function (navLink) {
-        navLink.addEventListener('click', function () {
-            navigation.classList.remove('on');
-        });
-    });
-    leftLink.addEventListener('click', function () {
-        navigation.classList.remove('on');
-    });
-});
 
 
 // ナビゲーション カレント
