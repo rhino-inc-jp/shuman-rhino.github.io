@@ -2201,6 +2201,11 @@ a:hover {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+.p-top-area_cnt-box-logo li img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 .p-top-area_cnt-box-logo li:hover {
   opacity: 0.8;
 }
@@ -3469,6 +3474,13 @@ a:hover {
   font-size: 2.2rem;
   color: var(--bgOraCol);
 }
+.p-top-sc-lead {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  line-height: 1.9;
+  max-width: 660px;
+  margin-inline: auto;
+}
 .p-top-sc-collab-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3506,13 +3518,13 @@ a:hover {
 }
 .p-top-sc-collab-brand-txt {
   font-size: 1.2rem;
-  color: var(--bgBlkCol);
+  color: var(--bgOraCol);
   line-height: 1.7;
   margin-bottom: 6px;
 }
 .p-top-sc-collab-insta {
   font-size: 1.2rem;
-  color: var(--bgBlkCol);
+  color: var(--bgOraCol);
   margin-bottom: 12px;
 }
 .p-top-sc-collab-insta a {
@@ -3531,20 +3543,22 @@ a:hover {
      object-fit: cover;
   display: block;
 }
+.p-top-sc-collab-item-name {
+  margin-top: 10px;
+  color: var(--bgOraCol);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
 .p-top-sc-collab-txt {
   margin-top: 8px;
-  color: var(--bgBlkCol);
+  color: var(--bgOraCol);
   font-size: 1.2rem;
   line-height: 1.7;
 }
 .p-top-sc-collab-txt a {
   color: var(--bgOraCol);
   text-decoration: underline;
-}
-.p-top-sc-collab-item-name {
-  font-size: 1.4rem;
-  color: var(--bgBlkCol);
-  margin-bottom: 10px;
 }
 .p-top-sc-coming {
   margin-top: 30px;
@@ -3556,6 +3570,15 @@ a:hover {
   letter-spacing: 0.1em;
 }
 @media only screen and (max-width: 768px) {
+  .p-top-sc-lead {
+    margin-top: calc(20 / 375 * 100vw);
+    font-size: calc(12 / 375 * 100vw);
+    letter-spacing: 0.09em;
+    line-height: 1.83;
+    text-align: justify;
+    -webkit-font-feature-settings: "palt";
+            font-feature-settings: "palt";
+  }
   .p-top-sc-media {
     margin-top: calc(20 / 375 * 100vw);
   }
@@ -3598,6 +3621,10 @@ a:hover {
   .p-top-sc-collab-insta {
     font-size: calc(11 / 375 * 100vw);
   }
+  .p-top-sc-collab-item-name {
+    margin-top: calc(8 / 375 * 100vw);
+    font-size: calc(12 / 375 * 100vw);
+  }
   .p-top-sc-collab-txt {
     margin-top: calc(6 / 375 * 100vw);
     font-size: calc(11 / 375 * 100vw);
@@ -3611,8 +3638,8 @@ a:hover {
 /* ===== stickyNav ===== */
 .stickyNav {
   background-color: var(--bgBgCol);
-  border-top: 1px solid var(--bgBgCol);
-  border-bottom: 1px solid var(--bgBgCol);
+  /* border-top: 1px solid var(--bgBlkCol);
+  border-bottom: 1px solid var(--bgBlkCol); */
 }
 .stickyNav-list {
   display: -webkit-box;
@@ -3656,6 +3683,9 @@ a:hover {
 .stickyNav-list li.current a {
   background-color: var(--bgOraCol);
   color: var(--bgBgCol);
+  /* border-top: 1px solid var(--bgBlkCol);
+  border-bottom: 1px solid var(--bgBlkCol); */
+  border: 1px solid var(--bgBlkCol);
 }
 @media only screen and (max-width: 768px) {
   .stickyNav-list {
