@@ -26,104 +26,26 @@ document.addEventListener('DOMContentLoaded', function () {
     var elemTop = [];
 
     function PositionCheck() {
-        var followingNav = $(".js-hd").outerHeight(true);
+        var halfVh = $(window).height() / 2;
         $(".scroll-point").each(function (i) {
-            elemTop[i] = Math.round(parseInt($(this).offset().top - followingNav - 220));
+            elemTop[i] = Math.round(parseInt($(this).offset().top - halfVh));
         });
     }
 
     function ScrollAnime() {
         var scroll = Math.round($(window).scrollTop());
         var NavElem = $(".js-flowList li");
-        var blk = $(".js-flowArea .blk");
-        var flowBd = $(".js-flowBd");
+        var total = elemTop.length;
+        var current = 0;
 
-        // 現在のcurrentクラスを削除
-        $(".js-flowList li").removeClass('current');
-        $(".js-flowArea .blk").removeClass('current');
-        if (scroll >= 0 && scroll < elemTop[1]) {//スクロール値が0以上 .scroll-point 1つめ（area-1）の高さ未満
-            $(NavElem[0]).addClass('current');//1つめのliに現在地クラスを付与
-            $(blk[0]).addClass('current');
-
-            $(blk[1]).removeClass('current');
-            $(blk[2]).removeClass('current');
-            $(blk[3]).removeClass('current');
-            $(blk[4]).removeClass('current');
-            $(blk[5]).removeClass('current');
-            $(blk[6]).removeClass('current');
-            $(blk[7]).removeClass('current');
+        for (var i = 0; i < total; i++) {
+            if (scroll >= elemTop[i]) {
+                current = i;
+            }
         }
-        else if (scroll >= elemTop[1] && scroll < elemTop[2]) {//.scroll-point 1つめ（area-1）以上.scroll-point 2つめ（area-2）未満
-            $(NavElem[1]).addClass('current');//2つめのliに現在地クラスを付与
-            $(blk[1]).addClass('current');
 
-            $(blk[0]).removeClass('current');
-            $(blk[2]).removeClass('current');
-            $(blk[3]).removeClass('current');
-            $(blk[4]).removeClass('current');
-            $(blk[5]).removeClass('current');
-            $(blk[6]).removeClass('current');
-            $(blk[7]).removeClass('current');
-        }
-        else if (scroll >= elemTop[2] && scroll < elemTop[3]) {//.scroll-point 2つめ（area-2）以上.scroll-point 3つめ（area-3）未満
-            $(NavElem[2]).addClass('current');//3つめのliに現在地クラスを付与
-            $(blk[2]).addClass('current');
-
-            $(blk[0]).removeClass('current');
-            $(blk[1]).removeClass('current');
-            $(blk[3]).removeClass('current');
-            $(blk[4]).removeClass('current');
-            $(blk[5]).removeClass('current');
-            $(blk[6]).removeClass('current');
-            $(blk[7]).removeClass('current');
-        }
-        else if (scroll >= elemTop[3] && scroll < elemTop[4]) {// .scroll-point 3つめ（area-3）以上
-            $(NavElem[3]).addClass('current');//4つめのliに現在地クラスを付与
-            $(blk[3]).addClass('current');
-
-            $(blk[0]).removeClass('current');
-            $(blk[1]).removeClass('current');
-            $(blk[2]).removeClass('current');
-            $(blk[4]).removeClass('current');
-            $(blk[5]).removeClass('current');
-            $(blk[6]).removeClass('current');
-            $(blk[7]).removeClass('current');
-        }
-        else if (scroll >= elemTop[4] && scroll < elemTop[5]) {// .scroll-point 3つめ（area-3）以上
-            $(NavElem[4]).addClass('current');//4つめのliに現在地クラスを付与
-            $(blk[4]).addClass('current');
-
-            $(blk[0]).removeClass('current');
-            $(blk[1]).removeClass('current');
-            $(blk[2]).removeClass('current');
-            $(blk[3]).removeClass('current');
-            $(blk[5]).removeClass('current');
-            $(blk[6]).removeClass('current');
-            $(blk[7]).removeClass('current');
-        }
-        else if (scroll >= elemTop[5] && scroll < elemTop[6]) {// .scroll-point 3つめ（area-3）以上
-            $(NavElem[5]).addClass('current');//4つめのliに現在地クラスを付与
-            $(blk[5]).addClass('current');
-
-            $(blk[0]).removeClass('current');
-            $(blk[1]).removeClass('current');
-            $(blk[2]).removeClass('current');
-            $(blk[3]).removeClass('current');
-            $(blk[4]).removeClass('current');
-            $(blk[6]).removeClass('current');
-            $(blk[7]).removeClass('current');
-        }else if (scroll >= elemTop[6]) {  // 7つめ以上、最後のセクション
-            $(NavElem[6]).addClass('current');
-            $(blk[6]).addClass('current');
-        
-            $(blk[0]).removeClass('current');
-            $(blk[1]).removeClass('current');
-            $(blk[2]).removeClass('current');
-            $(blk[3]).removeClass('current');
-            $(blk[4]).removeClass('current');
-            $(blk[5]).removeClass('current');
-            $(blk[6]).removeClass('current');
-        }
+        NavElem.removeClass('current');
+        $(NavElem[current]).addClass('current');
     }
 
     $(window).scroll(function () {
