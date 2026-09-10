@@ -3465,6 +3465,9 @@ text-decoration: underline;
 .p-top-sc-block {
   margin-top: 120px;
 }
+.p-top-sc-block.p-top-sc-block--1 {
+  margin-top: 30px;
+}
 .p-top-sc-block-ttl {
   margin-top: 0;
   background-color: #fff;
@@ -3622,6 +3625,10 @@ text-decoration: underline;
   .p-top-sc-block {
     margin-top: calc(60 / 375 * 100vw);
   }
+  .p-top-sc-block.p-top-sc-block--1 {
+    margin-top: calc(30 / 375 * 100vw);
+  }
+
   .p-top-sc-block-ttl {
     width: 100%;
     gap: calc(6 / 375 * 100vw);
