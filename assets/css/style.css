@@ -3517,7 +3517,7 @@ text-decoration: underline;
   grid-row: span 7;
   grid-template-rows: subgrid;
   background-color: var(--wht);
-  padding: 12px 12px 16px;
+  padding: 36px 12px 16px;
   margin-bottom: 22px;
 }
 .p-top-sc-collab-brand-name {
@@ -3647,7 +3647,7 @@ text-decoration: underline;
     grid-row: auto;
     width: 100%;
     margin-bottom: 0;
-    padding: calc(16 / 375 * 100vw);
+    padding: calc(35 / 375 * 100vw) calc(16 / 375 * 100vw) calc(16 / 375 * 100vw);
   }
   .p-top-sc-collab-list li:not(:first-of-type) {
     margin-top: calc(10 / 375 * 100vw);
