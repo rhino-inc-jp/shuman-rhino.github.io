@@ -3480,6 +3480,7 @@ a:hover {
   line-height: 1.9;
   max-width: 660px;
   margin-inline: auto;
+  font-weight: bold;
 }
 .p-top-sc-collab-list {
   display: -webkit-box;
@@ -3521,11 +3522,12 @@ a:hover {
   color: var(--bgOraCol);
   line-height: 1.7;
   margin-bottom: 6px;
+  font-weight: bold;
 }
 .p-top-sc-collab-insta {
   font-size: 1.2rem;
   color: var(--bgOraCol);
-  margin-bottom: 12px;
+  font-weight: bold;
 }
 .p-top-sc-collab-insta a {
   color: var(--bgOraCol);
@@ -3535,6 +3537,7 @@ a:hover {
   width: 100%;
   overflow: hidden;
   background-color: #ddd;
+  margin-top: 40px;
 }
 .p-top-sc-collab-img img {
   width: 100%;
@@ -3555,6 +3558,7 @@ a:hover {
   color: var(--bgOraCol);
   font-size: 1.2rem;
   line-height: 1.7;
+  font-weight: bold;
 }
 .p-top-sc-collab-txt a {
   color: var(--bgOraCol);
