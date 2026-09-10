@@ -1914,7 +1914,10 @@ a:hover {
 }
 .p-top-area_cnt-box-inner {
   border: 2px solid var(--bgOraCol);
-  padding: 38px 36px 140px;
+  padding: 38px 36px;
+}
+#STAGE02 .p-top-area_cnt-box-inner {
+  padding-bottom: 140px;
 }
 .p-top-area_cnt-box-ttl {
   text-align: center;
@@ -2871,8 +2874,12 @@ text-decoration: underline;
   }
   .p-top-area_cnt-box-inner {
     border: calc(2 / 375 * 100vw) solid var(--bgOraCol);
+    padding: calc(29 / 375 * 100vw) calc(14 / 375 * 100vw);
+  }
+  #STAGE02 .p-top-area_cnt-box-inner {
     padding: calc(29 / 375 * 100vw) calc(14 / 375 * 100vw) calc(65 / 375 * 100vw);
   }
+
   .p-top-area_cnt-box-ttl .en-ttl {
     font-size: calc(34 / 375 * 100vw);
   }
