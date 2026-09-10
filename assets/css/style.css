@@ -3640,7 +3640,7 @@ text-decoration: underline;
   }
   .p-top-sc-collab-list {
     display: block;
-    margin-top: calc(16 / 375 * 100vw);
+    margin-top: calc(20 / 375 * 100vw);
   }
   .p-top-sc-collab-list li {
     display: block;
